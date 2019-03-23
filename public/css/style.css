@@ -1,0 +1,183 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial;
+}
+
+body {
+	background-image: url('../images/newbackground.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+#logo {
+	text-align: center;
+	z-index: -1;
+	background-color: #2222227d;
+	padding-top: 5vh;
+	padding-bottom: 2vh;
+}
+
+#background-image {
+}
+
+#container {
+	width: 72vw;
+	height: 40vh;
+	background: inherit;
+	position: absolute;
+	overflow: hidden;
+	left: 23%;
+	top: 80%;
+	margin-left: -175px;
+	margin-top: -250px;
+	border-radius: 8px;
+	z-index: -1;
+}
+
+#container:before {
+	width: 100vw;
+	content: "ayy";
+	position: absolute;
+	top: -25px;
+	left: -25px;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	box-shadow: inset 0 0 0 20vw rgba(255, 255, 255, 0.2);
+	filter: blur(8px);
+}
+
+#links {
+	position: absolute;
+	top: 55vh;
+	left: 12.7vw;
+}
+
+#description {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	width: 50vw;
+	margin-left: 25vw;
+	margin-top: 4vh;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+#user-label,
+#landowner-label {
+	position: absolute;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+#user-label {
+	left: 25%;
+}
+
+#landowner-label {
+	left: 69%;
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* Style tab links */
+.tablink {
+	animation: 0.5s ease-out 0s 1 slideInFromLeft;
+	background-color: #2222227d;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 2vw;
+	font-size: 3em;
+	font-weight: bold;
+	width: 50%;
+	font-family: lato, sans-serif;
+}
+
+.tablink:hover {
+	background-color: #7777777d;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+	color: white;
+	display: none;
+	padding: 100px 20px;
+	height: 100%;
+}
+
+#Portfolio {
+	background-color: #38723873;
+	transition: all 0.5s ease;
+}
+#Properties {
+	background-color: #7c7cfd73;
+	transition: all 0.5s ease;
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapper ul {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height
+and float them to left and set its border and border-radius.
+*/
+.wrapper ul li {
+	width: 5vw;
+	margin: 0 14.5vw;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	transition: all 0.5s ease;
+	filter: invert(100%);
+}
+
+.wrapper ul li:hover .fa-users {
+	color: #183dad;
+	text-shadow: 0 0 10px #183dad;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-city {
+	color: #00aced88;
+	text-shadow: 0 0 10px #00aced88;
+	transition: all 0.5s ease;
+}
+
+a {
+	color: inherit;
+}
