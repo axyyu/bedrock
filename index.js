@@ -13,6 +13,7 @@ const root = path.join(__dirname, '/public');
 
 client.connect((err) => {
 	if (err) throw err;
+	console.log(err);
 	const collection = client.db('test').collection('properties');
 
 	const app = express();

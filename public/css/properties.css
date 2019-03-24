@@ -200,3 +200,25 @@ label {
 	justify-content: space-between;
 	margin-bottom: 24px;
 }
+
+.keywords {
+	display: flex;
+	flex-wrap: wrap;
+	color: #393e41;
+}
+
+.keyword {
+	color: #393e41 !important;
+	border: 1px solid #44bba4;
+
+	padding: 4px;
+	padding-right: 0;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+.keyword .type {
+	color: #393e41;
+	background: #44bba4;
+	padding: 4px;
+}

@@ -300,6 +300,16 @@ function loadPanel(obj, index) {
     <p>Garage: ${GarageType[obj.GarageType]}</p>
     <p>Driveway: ${PavedDrive[obj.PavedDrive]}</p>
     <p>Misc: ${MiscFeature[obj.MiscFeature] || 'No extra features'}</p>
+    
+    <div class="keywords">
+    `;
+
+	if ('Keywords' in obj && obj.Keywords)
+		obj.Keywords.forEach((word) => {
+			html += `<span class="keyword">${word.name} <span class="type">${word.type}</span></span>`;
+		});
+
+	html += `</div>
 
     <button onclick="closePanel()">Back</button>
     `;
