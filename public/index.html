@@ -18,23 +18,43 @@
     <div id="container">
     </div>
     <div id="description">
-        This is what we do. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, 
-        and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the 
-        spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an 
-        immense dark sphere, whose upper half was strewn with silver. 
+        I believe in doing the right thing. Always.
+
+
+        I believe in helping people who are less privileged than me. Because we should always consider and help those who aren't as lucky as us.
+            
+            
+        And I believe in love: loving yourself and everyone around you. 
     </div>
-    <div id="funny-gifs">
+    <!--<div id="funny-gifs">
         <img id="background-image" src="images/banana.gif"/> 
         <img id="background-image" src="images/dog.gif"/> 
-    </div>
+    </div> -->
     <div id="links" class="wrapper">
         <ul>
-            <a href="user.html"><li id="user" class="icon"><i class="fas fa-users fa-10x" aria-hidden="true"></i></li></a>
-            <a href="landowner.html"><li id="landowner" class="icon"><i class="fas fa-city fa-10x" aria-hidden="true"></i></li></a>
+            <li id="user" class="icon"><i class="fas fa-users fa-10x" aria-hidden="true"></i></li>
+            <li id="landowner" class="icon"><i class="fas fa-city fa-10x" aria-hidden="true"></i></li>
         </ul>
         <span id="user-label">USER</span>
         <span id="landowner-label">LANDOWNER</span>
     </div>
-
+    <div id= "whitespace">
+    </div>
+    <div id= "whitespace2">
+    </div>
 </body>
+<script>
+    $("#landowner").click( function (){
+        $('#whitespace').animate({top:0}, 1000, function() {
+            window.location.href = "landowner.html";
+        });
+        return false;
+    });
+    $("#user").click( function (){
+        $('#whitespace2').animate({top:0}, 1000, function() {
+            window.location.href = "user.html";
+        });
+        return false;
+    });
+</script>
 </html>

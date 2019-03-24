@@ -1,0 +1,130 @@
+#owned-list {
+	display: flex;
+	flex-wrap: wrap;
+	overflow-x: auto;
+	margin: -16px;
+	width: 750px;
+}
+
+.refund {
+	background: #ef6461;
+}
+
+#owned-info-container {
+	display: none;
+	height: calc(100vh - 246px);
+	border: 1px solid #393e41;
+	width: 700px;
+}
+
+#owned-info {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 16px 32px;
+	overflow-y: auto;
+}
+
+.head {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.head .img-container {
+	display: flex;
+	justify-content: center;
+	object-fit: contain;
+	align-items: center;
+	background: #393e41;
+}
+
+.head .img-container img {
+	width: 100%;
+}
+
+.head-info {
+	padding-left: 16px;
+}
+
+#owned-info .progressbar {
+	position: relative;
+	width: 100%;
+	background: #393e41aa;
+	height: 24px;
+	overflow: hidden;
+	margin-top: 24px;
+}
+
+#owned-info .progressbar .progress {
+	position: absolute;
+	left: 0;
+	height: 24px;
+	width: 50%;
+}
+
+#owned-info .progress-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+#invest-input {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 0 16px;
+	font-size: 1em;
+}
+
+.invest-money {
+	display: grid;
+	width: 100%;
+	grid-template-columns: auto 200px;
+	grid-column-gap: 16px;
+	margin-top: -16px;
+	margin-bottom: 16px;
+}
+
+#available {
+	display: none;
+}
+
+.column {
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.chart-container {
+	position: fixed;
+	width: 40vw;
+	height: 40vh;
+	right: 64px;
+	top: 15vh;
+	border: 1px solid #393e41;
+}
+
+#myChart {
+	width: 100%;
+	height: 100%;
+}
+
+.linechart-container {
+	display: block;
+	position: fixed;
+	right: 64px;
+	top: 28vw;
+	width: 40vw;
+	height: 40vh;
+	border: 1px solid #393e41;
+}
+
+#linegraph {
+	width: 100%;
+	height: 100%;
+}

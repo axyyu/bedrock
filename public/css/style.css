@@ -7,24 +7,22 @@ html {
 }
 
 body {
-	background-image: url('../images/newbackground.jpg');
+	background-image: url('../images/background3.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	background-size: calc(100% + 50px);
 }
 
 #logo {
 	text-align: center;
 	z-index: -1;
-	background-color: #2222227d;
+	background-color: #222222bd;
 	padding-top: 5vh;
 	padding-bottom: 2vh;
-}
-
-#background-image {
 }
 
 #container {
@@ -50,14 +48,56 @@ body {
 	bottom: 0;
 	right: 0;
 	background: inherit;
-	box-shadow: inset 0 0 0 20vw rgba(255, 255, 255, 0.2);
+	box-shadow: inset 0 0 0 20vw rgba(255, 255, 255, 0.3);
 	filter: blur(8px);
+}
+
+#container2 {
+	width: 130vw;
+	height: 150vh;
+	background: inherit;
+	position: absolute;
+	overflow: hidden;
+	margin-left: -175px;
+	margin-top: -250px;
+	border-radius: 8px;
+	z-index: -1;
+}
+
+#container2:before {
+	width: 130vw;
+	height: 150vh;
+	content: "ayy";
+	position: absolute;
+	top: -25px;
+	left: -25px;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	box-shadow: inset 0 0 0 50vw rgba(255, 255, 255, 0.1);
+	filter: blur(5px);
 }
 
 #links {
 	position: absolute;
-	top: 55vh;
+	top: 57vh;
 	left: 12.7vw;
+}
+
+#whitespace {
+	height: 100%;
+	position: fixed;
+	background: white;
+	width: 100%;
+	top: 100%;
+}
+
+#whitespace2 {
+	height: 100%;
+	position: fixed;
+	background: white;
+	width: 100%;
+	top: -100%;
 }
 
 #description {
@@ -100,10 +140,10 @@ body {
 /* Style tab links */
 .tablink {
 	animation: 0.5s ease-out 0s 1 slideInFromLeft;
-	background-color: #2222227d;
+	background-color: #2222222d;
 	color: white;
 	float: left;
-	border: none;
+	border-bottom: 1px solid #393e41;
 	outline: none;
 	cursor: pointer;
 	padding: 2vw;
@@ -119,22 +159,21 @@ body {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-	color: white;
 	display: none;
 	padding: 100px 20px;
 	height: 100%;
 }
 
 #Portfolio {
-	background-color: #38723873;
+	display: block;
 	transition: all 0.5s ease;
 }
 #Properties {
-	background-color: #7c7cfd73;
 	transition: all 0.5s ease;
 }
 
 .column {
+	text-align: center;
 	float: left;
 	width: 50%;
 }
@@ -173,11 +212,35 @@ and float them to left and set its border and border-radius.
 }
 
 .wrapper ul li:hover .fa-city {
-	color: #00aced88;
-	text-shadow: 0 0 10px #00aced88;
+	color: #183dad;
+	text-shadow: 0 0 10px #183dad;
 	transition: all 0.5s ease;
 }
 
 a {
 	color: inherit;
+}
+
+.chart-container {
+	width: 500px;
+	height: 500px;
+}
+
+.linechart-container {
+	width: 675px;
+	height: 500px;
+}
+
+h1 {
+	margin-top: 7vh;
+	font-size: 36px;
+	padding-top: 15px;
+	color: black;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-column-gap: 50px;
+	grid-row-gap: 50px;
 }

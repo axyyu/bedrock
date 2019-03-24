@@ -3,35 +3,74 @@
 <head>
     <title>Bedrock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="user.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/properties.css">
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/user.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxP1KwgdTvYySpcSzxTnril8NuJY2OF9g&callback=initPage" type="text/javascript"></script>
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded',function(){
-            document.getElementById("defaultOpen").click();
-        });
-    </script>
-    <button class="tablink" onclick="openPage('Portfolio', this, 'green')" id="defaultOpen">Portfolio</button>
-    <button class="tablink" onclick="openPage('Properties', this, 'blue')">Properties</button>    
-    <div id="Portfolio" class="tabcontent">
-    <h3>Portfolio</h3>
-    <div class = "row">
-      <div class="column">
-        pie chart
-      </div>
-      <div class="column">
-        bargraph
-      </div>
-    </div>
-    Table of portfolio
-    </div>
-        
-    <div id="Properties" class="tabcontent">
-    <h3>Properties</h3>
-    <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
+    <header>
+      <img src="images/bedrocklogoblack.png">
+      <button id="toggle" onclick="toggleScreen()">Invest In Properties</button>
+    </header>
+    <section id="available">
+        <h1>Available Properties</h1>
+
+        <div id="property-panel">
+            <div id="property-info-container">
+                <div id="property-info">
+                    <h2>Address</h2>
+                    <div class="progressbar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>        
+            <div id="property-list">
+            </div>
+        </div>
+
+        <div id="property-map">
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1>Portfolio: $<span id="balance"></span></h1>
+
+        <div id="owned-panel"> 
+            <div id="owned-info-container">
+                <div id="owned-info">
+                    <h2>Address</h2>
+                    <div class="progressbar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div> 
+            <div id="owned-list">
+
+            </div>
+        </div>
+
+        <div id="owned-data">
+            <div id="owned-piechart">
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div id="owned-linegraph">
+                <div class="linechart-container">
+                    <canvas id="linegraph"></canvas>
+                </div>
+            </div>
+        </div> 
+    </section>
     
 </body>
 </html>

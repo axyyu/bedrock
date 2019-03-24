@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bedrock</title>
+    <title>Land Owner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="landowner.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/properties.css">
+    <link rel="stylesheet" type="text/css" href="css/landowner.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxP1KwgdTvYySpcSzxTnril8NuJY2OF9g&callback=initPage" type="text/javascript"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/landowner.js"></script>
 </head>
 <body>
-    <button class="tablink" onclick="openPage('Portfolio', this, 'green')" id="defaultOpen">Properties</button>
+    <header>
+        <img src="images/bedrocklogoblack.png">
+        <button><i class="fas fa-plus"></i>Add New Property</button>
+    </header>
 
-    <div id="Properties" class="tabcontent">
-        <h3>Properties</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
+    <section>
+        <h1>My Properties</h1>
+
+        <div id="property-panel">
+            <div id="property-info-container">
+                <div id="property-info">
+                    <h2>Address</h2>
+                    <div class="progressbar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>        
+            <div id="property-list">
+            </div>
+        </div>
+
+        <div id="property-map">
+            <div id="map"></div>
+        </div>
+    </section>
 </body>
+</html>

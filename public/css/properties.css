@@ -1,0 +1,202 @@
+body,
+html {
+	margin: 0;
+	font-family: 'PT Sans';
+}
+
+body {
+	display: none;
+	overflow-y: scroll;
+}
+
+header {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	top: 0vw;
+	background-color: #f5f5f5;
+	height: 3vw;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 100;
+	border-bottom: 1px solid #393e41;
+}
+
+header img {
+	height: 32px;
+	margin-left: 3.3vw;
+}
+
+button {
+	border: none;
+	outline: none;
+
+	font-family: 'PT Sans';
+	font-size: 1em;
+
+	background: #77cdbc;
+	padding: 12px 24px;
+	cursor: pointer;
+	margin-right: 5vw;
+}
+
+button i {
+	margin-right: 16px;
+}
+
+section {
+	margin: 64px;
+	margin-top: 90px;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+#property-list {
+	display: flex;
+	flex-wrap: wrap;
+	overflow-y: auto;
+	margin: -16px;
+	width: 750px;
+}
+
+.property {
+	border: 1px solid #393e41;
+	width: 300px;
+	padding: 16px;
+	margin: 16px;
+}
+
+.property .img-container {
+	object-fit: cover;
+	height: calc(300px - 32px);
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 8px;
+}
+
+.property img {
+	height: 100%;
+}
+
+label {
+	font-weight: bold;
+	color: #d3d0cb;
+}
+
+.property h3 {
+	cursor: pointer;
+}
+
+.property .progressbar {
+	position: relative;
+	width: 100%;
+	background: #393e41aa;
+	height: 24px;
+	overflow: hidden;
+}
+
+.property .progressbar .progress {
+	position: absolute;
+	left: 0;
+	height: 24px;
+	width: 50%;
+}
+
+.open span {
+	color: #e7bb41;
+}
+
+.open .progress {
+	background: #e7bb41;
+}
+
+.expired span {
+	color: #ef6461;
+}
+
+.expired .progress {
+	background: #ef6461;
+}
+
+.funded span {
+	color: #44bba4;
+}
+
+.funded .progress {
+	background: #44bba4;
+}
+
+#property-map {
+	border: 1px solid #393e41;
+	position: fixed;
+	margin-left: auto;
+	float: right;
+	right: 64px;
+	bottom: 64px;
+	height: calc(100vh - 207px);
+	width: calc(100vw - 900px);
+	background: #393e41;
+}
+
+#map {
+	height: 100%;
+}
+
+#property-info-container {
+	display: none;
+	height: calc(100vh - 246px);
+	border: 1px solid #393e41;
+	width: 700px;
+}
+
+#property-info {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 16px 32px;
+	overflow-y: auto;
+}
+
+.head {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.head .img-container {
+	display: flex;
+	justify-content: center;
+	object-fit: contain;
+	align-items: center;
+	background: #393e41;
+}
+
+.head .img-container img {
+	width: 100%;
+}
+
+.head-info {
+	padding-left: 16px;
+}
+
+#property-info .progressbar {
+	position: relative;
+	width: 100%;
+	background: #393e41aa;
+	height: 24px;
+	overflow: hidden;
+	margin-top: 24px;
+}
+
+#property-info .progressbar .progress {
+	position: absolute;
+	left: 0;
+	height: 24px;
+	width: 50%;
+}
+
+#property-info .progress-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
